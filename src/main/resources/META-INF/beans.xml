@@ -26,5 +26,13 @@
         <constructor-arg index="0" ref="jmsTemplate"/>
     </bean>
 
+    <bean id="messageReceiver" class="com.mycompany.activemq.MessageReceiver"/>
+
+    <bean class="org.springframework.jms.listener.SimpleMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="destinationName" value="activemq_spring_queue"/>
+        <property name="messageListener" ref="messageReceiver"/>
+    </bean>
+
 
 </beans>
