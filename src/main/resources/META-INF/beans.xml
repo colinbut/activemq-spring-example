@@ -13,7 +13,7 @@
     </bean>
 
     <bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">
-        <constructor-arg index="0" value="activemq_spring_queue"/>
+        <constructor-arg index="0" value="activemq_spring_xml"/>
     </bean>
 
     <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
@@ -30,7 +30,7 @@
 
     <bean class="org.springframework.jms.listener.SimpleMessageListenerContainer">
         <property name="connectionFactory" ref="connectionFactory"/>
-        <property name="destinationName" value="activemq_spring_queue"/>
+        <property name="destinationName" value="activemq_spring_xml"/>
         <property name="messageListener" ref="messageReceiver"/>
     </bean>
 
