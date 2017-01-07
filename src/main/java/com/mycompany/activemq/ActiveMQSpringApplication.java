@@ -18,7 +18,6 @@ public class ActiveMQSpringApplication {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/main/resources/META-INF/beans.xml");
         final MessageSender messageSender = (MessageSender) applicationContext.getBean("messageSender");
-        final MessageReceiver messageReceiver = (MessageReceiver) applicationContext.getBean("messageReceiver");
 
         LOGGER.info("Starting sending messages..");
 
