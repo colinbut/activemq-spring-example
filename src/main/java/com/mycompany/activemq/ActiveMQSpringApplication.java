@@ -4,9 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
- * App
+ * ActiveMQSpringApplication
  */
-public class App {
+public class ActiveMQSpringApplication {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new FileSystemXmlApplicationContext("resources/META-INF/beans.xml");
