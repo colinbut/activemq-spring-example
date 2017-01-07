@@ -9,7 +9,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 public class ActiveMQSpringApplication {
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("resources/META-INF/beans.xml");
+        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/main/resources/META-INF/beans.xml");
         MessageSender messageSender = (MessageSender) applicationContext.getBean("messageSender");
 
         while (true) {
