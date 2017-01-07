@@ -8,14 +8,19 @@
     <name>activemq-spring</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <java.version>1.7</java.version>
+        <spring.version>4.3.5.RELEASE</spring.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -31,13 +36,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jms</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
     </dependencies>
