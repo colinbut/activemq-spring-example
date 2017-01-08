@@ -13,7 +13,6 @@ import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
-import java.util.Random;
 
 public class MessageSender {
 
