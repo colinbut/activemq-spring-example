@@ -10,6 +10,7 @@
 *.classpath
 *.iml
 
+effective.pom
 
 .settings/*
 .idea/*
